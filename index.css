@@ -1,0 +1,57 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+
+    background-color: azure;
+    background: linear-gradient( azure, grey);
+    background-repeat: no-repeat;
+    
+    color: white;
+    text-shadow: 0 0 10px grey;
+    text-align: center;
+}
+
+.container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    max-width: 450px;
+}
+
+button {
+    height: 100px;
+    width: 100px;
+    
+    border: 4px grey solid;
+    border-radius: 50%;
+    
+    cursor: pointer;
+    animation-name: spin;
+    animation-duration: 30000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+}
+
+.fun, button{
+    background: conic-gradient( red, orange, yellow, green, blue, purple, magenta, red );
+}
+
+.fun {
+    height: 100vh;
+}    
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
